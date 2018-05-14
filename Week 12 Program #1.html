@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Add The Ends</title>
+    <script>
+        /* Defining Table
+        Input: none. Assumes the array named "list" already exists and has values
+        Processing: find out the first and last value in the array and add together
+        Output: the sum of processing
+        */
+        
+        //TEST THE FUNCTION
+        function test() {
+            var list = [0,3,6,4,77,12];
+            var result = addEnds(list);
+            document.getElementById("outputDiv").innerHTML = "The sum is " + result;
+        }
+        
+        function addEnds(list) {
+            var first = list[0];
+            var lastIndex = 0;
+            for (i=0; i<list.length; i++) {
+                lastIndex = i;
+            }
+            var last = list[lastIndex];
+            var sum = first + last;
+            return sum;
+            
+        }
+        
+    </script>
+    </head>
+    <body>
+        <!--Button is for testing addEnds()-->
+            <button type="button" onclick="test()">Test</button> 
+    
+        <div id="outputDiv"></div>
+    </body>
+</html>
